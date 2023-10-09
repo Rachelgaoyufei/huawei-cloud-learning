@@ -88,8 +88,8 @@ FORMAT 'CSV' ,
 DELIMITER ',',
 encoding 'utf8',
 header 'false',
-ACCESS_KEY '5BMZCKQ61TUZR90GFPGA',
-SECRET_ACCESS_KEY 'aJIXIMat8VxtwcBrCZOFUJs8V9lcJAhk8ywXchGW',
+ACCESS_KEY 'your_access_key',
+SECRET_ACCESS_KEY 'your_secret_access_key',
 fill_missing_fields 'true',
 ignore_extra_data 'true'
 );
