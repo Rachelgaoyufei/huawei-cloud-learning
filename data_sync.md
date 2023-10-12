@@ -1,6 +1,6 @@
 # action step Task 1 + Task 2
 # Task 1
-# Migrate data from other cloud or on promise database to Huawei Cloud using CDM
+# Migrate data to Huawei Cloud using CDM
 ```
 Create/buy new pruducts
 ```
@@ -24,6 +24,7 @@ If you don’t have your own CDM, please buy new cluster.
 ```
 3. Buy new DWS and OBS:
 In the navigation pane, choose DWS and OBS, and buy new DWS and OBS
+For DWS you need choose standard, if you choose Hybrid, maybe you meet trouble(debug)
 ```
 ```
 Create function and links
@@ -45,25 +46,25 @@ Open the MobaXterm and enter this: ssh root@{$your_ip_address}
 Open the job management and create link, choose SFTP
 ```
 ```
-4. Connect CDM and OBS, in CDM choose job management
-Create link to OBS, the type is OBS connector 
-Establish the link and test connectivity
-After that, choose Table/File Migration, and create job, 
+4. Connect CDM and OBS
+in CDM choose job management, create link to OBS, the type is OBS connector 
+Test connectivity
+Select Table/File Migration, and create job, 
 Choose the source configuration and destination job configuration, test connectivity
 ```
 ```
-5. Create link between CDM and DWS and the type is JDBC connector. 
-Table/File Migration to create a new job, 
+5. Connect CDM and DWS
+In CDM select job management, create link to DWS, the type is JDBC connector
+Test connectivity
+Select Table/File Migration to create a new job, 
 Choose the source configuration and destination job configuration, test connectivity
 ```
 # Task 2
 # Read data from OBS to DWS
-```
-Read data from OBS to DWS
-```
+
 ```
 Download Dbeaver at this: https://dbeaver.io/
-Enter the Host, get it from dws
+Edit connection--->Enter the Host, get it from dws
 Database: postgres
 Enter the Username and Password, test connectivity
 ```
@@ -118,6 +119,10 @@ SELECT * FROM gaoyufei.name_list
 ```
 #Test the task if is successful
 select *from gaoyufei.inner_name_list inl 
+```
+```
+# You can get your key from IAM
+link: https://console-intl.huaweicloud.com/iam
 ```
 
 
